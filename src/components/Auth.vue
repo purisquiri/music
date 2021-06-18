@@ -168,7 +168,7 @@
 </template>
 
 <script>
-import { mapMutations, mapGetters } from 'vuex';
+import { mapMutations, mapState } from 'vuex';
 
 export default {
   name: 'Auth',
@@ -176,7 +176,8 @@ export default {
     // authModalShow() {
     //   return this.$store.getters.authModalShow;
     // },
-    ...mapGetters(['authModalShow']),
+    // ...mapGetters(['authModalShow']), you need to import mapGetters
+    ...mapState(['authModalShow']), // this is another option so we don't need to use getters in store
   },
   methods: {
     ...mapMutations(['toggleAuthModal']),
