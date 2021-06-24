@@ -10,9 +10,9 @@
       <div class="text-white main-header-content">
         <h1 class="font-bold text-5xl mb-5">Listen to Great Music!</h1>
         <p class="w-full md:w-8/12 mx-auto">
-          In this place you will find the best music just in one click,
-          save your espetial song in your personal library or just listen ramdon
-          music from over the world
+          In this place you will find the best music just in one click, save
+          your espetial song in your personal library or just listen ramdon
+          music from around the world
         </p>
       </div>
     </div>
