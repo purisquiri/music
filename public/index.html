@@ -16,6 +16,29 @@
       integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
       crossorigin="anonymous"
     />
+    <!-- <p>Testing cross-site cookies</p>
+    <script>
+      function fetchCookies(requestMethod) {
+        var req = new XMLHttpRequest();
+        req.withCredentials = true;
+        req.responseType = 'json';
+        req.open(
+          requestMethod,
+          'https://samesite-sandbox.glitch.me/cookies.json',
+          true
+        );
+        req.onload = function() {
+          var jsonResponse = { method: requestMethod, cookies: req.response };
+          window.parent.postMessage(
+            jsonResponse,
+            'https://samesite-sandbox.glitch.me'
+          );
+        };
+        req.send(null);
+      }
+
+      fetchCookies('GET');
+    </script> -->
   </head>
   <body class="bg-gray-100 font-sans pb-24">
     <noscript>
