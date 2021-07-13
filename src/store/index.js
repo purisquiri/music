@@ -22,17 +22,21 @@ export default createStore({
     // we are desestructuration the ctx so we can use commit function
     // the second parameter is the payload that it was pass in from the dispatch
     async register({ commit }, payload) {
-      await auth.createUserWithEmailAndPassword(
+      const userCred = await auth.createUserWithEmailAndPassword(
         payload.email,
         // eslint-disable-next-line comma-dangle
         payload.password
       );
 
-      await usersCollection.add({
+      await usersCollection.doc(userCred.user.uid).set({
         name: payload.name,
         email: payload.email,
         age: payload.age,
         country: payload.country,
+      });
+
+      await userCred.user.updateProfile({
+        displayName: payload.name,
       });
 
       commit('toggleAuth');
